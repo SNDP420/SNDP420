@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sandeep Gurung - Contact</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="contact-container">
+        <h2 class="section-title">Get in Touch</h2>
+
+        <div class="contact-content">
+          <!-- Contact Form -->
+          <div class="contact-form">
+            <form>
+              <div class="form-group">
+                <input type="text" id="name" required />
+                <label for="name">Your Name</label>
+                <div class="underline"></div>
+              </div>
+
+              <div class="form-group">
+                <input type="email" id="email" required />
+                <label for="email">Email</label>
+                <div class="underline"></div>
+              </div>
+
+              <div class="form-group">
+                <textarea id="message" rows="5" required></textarea>
+                <label for="message">Your Message</label>
+                <div class="underline"></div>
+              </div>
+
+              <button type="submit" class="cta-button">
+                Send Message <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h3>Location</h3>
+              <p>Pokhara, Nepal</p>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <h3>Email</h3>
+              <p>sandeepgrg939@gmail.com</p>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <h3>Phone</h3>
+              <p>+977 9864890530</p>
+            </div>
+
+            <!-- Modified Social Links -->
+            <div class="social-links">
+              <a
+                href="https://github.com/SNDP420"
+                class="social-icon"
+                target="_blank"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/ngolo-undefined-927142339/"
+                class="social-icon"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100025502873457"
+                class="social-icon"
+                target="_blank"
+              >
+                <i class="fab fa-facebook"></i>
+                <!-- Changed to Facebook -->
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      // Updated Form Label Handling
+      document
+        .querySelectorAll(".form-group input, .form-group textarea")
+        .forEach((element) => {
+          const label = element.previousElementSibling;
+          const underline = element.nextElementSibling;
+
+          // Remove label immediately when typing
+          element.addEventListener("input", () => {
+            label.style.display = element.value ? "none" : "block";
+            underline.style.width = element.value ? "100%" : "0";
+          });
+
+          // Handle focus states
+          element.addEventListener("focus", () => {
+            underline.style.width = "100%";
+            if (!element.value) label.style.opacity = "0.5";
+          });
+
+          element.addEventListener("blur", () => {
+            if (!element.value) {
+              label.style.display = "block";
+              underline.style.width = "0";
+            }
+          });
+        });
+    </script>
+  </body>
+</html>

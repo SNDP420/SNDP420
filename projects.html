@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sandeep Gurung - Projects</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+      <div class="projects-container">
+        <h2 class="section-title">My Technical Projects</h2>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-image">
+              <img
+                src="assets/projects/ecommerce.jpg"
+                alt="E-Commerce Platform"
+              />
+            </div>
+            <div class="project-content">
+              <h3>E-Commerce Platform</h3>
+              <div class="project-meta">
+                <span class="project-date">Jan 2024</span>
+                <span class="project-type">Web Development</span>
+              </div>
+              <p class="project-description">
+                Full-stack e-commerce solution with user authentication, product
+                management, and payment integration.
+              </p>
+              <div class="tech-stack">
+                <span class="tech-item">React</span>
+                <span class="tech-item">Node.js</span>
+                <span class="tech-item">MongoDB</span>
+                <span class="tech-item">Stripe API</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link github">
+                  <i class="fab fa-github"></i> Source Code
+                </a>
+                <a href="#" class="project-link demo">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-image">
+              <img src="assets/projects/network-tool.jpg" alt="Network Tool" />
+            </div>
+            <div class="project-content">
+              <h3>Network Security Tool</h3>
+              <div class="project-meta">
+                <span class="project-date">Mar 2024</span>
+                <span class="project-type">Cyber Security</span>
+              </div>
+              <p class="project-description">
+                Python-based network monitoring system with real-time threat
+                detection and analysis capabilities.
+              </p>
+              <div class="tech-stack">
+                <span class="tech-item">Python</span>
+                <span class="tech-item">Scapy</span>
+                <span class="tech-item">Linux</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link github">
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a href="#" class="project-link demo">
+                  <i class="fas fa-external-link-alt"></i> Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="project-image">
+              <img
+                src="assets/projects/portfolio.png"
+                alt="Portfolio Website"
+              />
+            </div>
+            <div class="project-content">
+              <h3>Portfolio Website</h3>
+              <div class="project-meta">
+                <span class="project-date">Ongoing</span>
+                <span class="project-type">Web Design</span>
+              </div>
+              <p class="project-description">
+                Modern responsive portfolio with interactive elements and custom
+                animations.
+              </p>
+              <div class="tech-stack">
+                <span class="tech-item">HTML5</span>
+                <span class="tech-item">CSS3</span>
+                <span class="tech-item">JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/SNDP420/Myfirst"
+                  target="_blank"
+                  class="project-link github"
+                >
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a href="index.html" class="project-link demo">
+                  <i class="fas fa-external-link-alt"></i> Live
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Smooth scroll functionality
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
